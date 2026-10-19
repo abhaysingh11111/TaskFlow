@@ -1,0 +1,370 @@
+/* =========================================
+TASKFLOW OTP VERIFICATION PAGE
+Modern Light Theme
+========================================= */
+
+.otp_page_container {
+display: flex;
+align-items: stretch;
+justify-content: center;
+width: 100%;
+min-height: 100vh;
+margin: 0;
+overflow: hidden;
+font-family: "Inter", "Segoe UI", Arial, sans-serif;
+box-sizing: border-box;
+}
+
+/* =========================================
+LEFT IMAGE SECTION
+========================================= */
+
+.otp_page_left {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 50%;
+min-height: 100vh;
+box-sizing: border-box;
+background: #eef2ff;
+overflow: hidden;
+}
+
+.taskflow_left_img {
+display: block;
+width: 100%;
+height: 80%;
+object-position: center;
+
+
+}
+
+/* =========================================
+RIGHT OTP SECTION
+========================================= */
+
+.otp_page_right {
+display: flex;
+align-items: center;
+justify-content: center;
+padding-bottom: 70px;
+width: 50%;
+min-height: 100vh;
+box-sizing: border-box;
+background: linear-gradient(
+135deg,
+#eef2ff 0%,
+#f8faff 50%,
+#ede9fe 100%
+);
+
+}
+
+/* =========================================
+OTP FORM CARD
+========================================= */
+
+.data_wrapper {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 34px;
+width: 100%;
+max-width: 480px;
+min-width: 0;
+box-sizing: border-box;
+margin: 0;
+padding: 48px 36px;
+border: 1px solid #e0e7ff;
+border-radius: 24px;
+background: rgba(255, 255, 255, 0.96);
+box-shadow: 0 20px 55px rgba(51, 65, 85, 0.10);
+}
+
+/* =========================================
+SIX OTP INPUT BOXES
+========================================= */
+
+.otp_box_wrapper {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 12px;
+width: 100%;
+}
+
+/* Common styling for all OTP inputs */
+
+.otp_box_wrapper input {
+width: 52px;
+height: 60px;
+flex: 1;
+min-width: 0;
+max-width: 60px;
+box-sizing: border-box;
+padding: 0;
+border: 1.5px solid #dbe2ee;
+border-radius: 12px;
+outline: none;
+background: #f8fafc;
+color: #4338ca;
+font-family: inherit;
+font-size: 1.5rem;
+font-weight: 800;
+text-align: center;
+caret-color: #6366f1;
+transition:
+border-color 0.2s ease,
+box-shadow 0.2s ease,
+background-color 0.2s ease;
+}
+
+/* OTP input focus effect */
+
+.otp_box_wrapper input:focus {
+border-color: #6366f1;
+background: #ffffff;
+box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+/* =========================================
+VERIFY BUTTON
+========================================= */
+
+.otp_submit_btn {
+width: 100%;
+max-width: 320px;
+min-height: 54px;
+box-sizing: border-box;
+padding: 14px 24px;
+border: none;
+border-radius: 12px;
+background: linear-gradient(
+100deg,
+#7c3aed,
+#4f46e5,
+#2563eb
+);
+color: #ffffff;
+font-family: inherit;
+font-size: 1.05rem;
+font-weight: 700;
+letter-spacing: 0.3px;
+cursor: pointer;
+box-shadow: 0 8px 20px rgba(79, 70, 229, 0.20);
+transition:
+transform 0.25s ease,
+box-shadow 0.25s ease;
+}
+
+.otp_submit_btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 12px 25px rgba(79, 70, 229, 0.28);
+}
+
+.otp_submit_btn:active {
+transform: translateY(0);
+}
+
+.otp_submit_btn:focus-visible,
+.resend_otp_btn:focus-visible {
+outline: 3px solid #a5b4fc;
+outline-offset: 4px;
+}
+
+/* =========================================
+RESEND OTP BUTTON
+========================================= */
+
+.resend_otp_btn {
+padding: 8px 12px;
+border: none;
+border-radius: 8px;
+background: transparent;
+color: #4f46e5;
+font-family: inherit;
+font-size: 1rem;
+font-weight: 600;
+text-decoration: none;
+cursor: pointer;
+transition:
+color 0.2s ease,
+background-color 0.2s ease;
+}
+
+.resend_otp_btn:hover {
+color: #3730a3;
+background: #eef2ff;
+}
+
+/* =========================================
+ERROR MESSAGE
+========================================= */
+
+.err_div {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+min-height: 48px;
+box-sizing: border-box;
+padding: 12px 16px;
+border: 1px solid #fecaca;
+border-radius: 12px;
+background: #fef2f2;
+color: #b91c1c;
+font-size: 0.95rem;
+text-align: center;
+overflow-wrap: anywhere;
+}
+
+/* =========================================
+LOADING SPINNER
+========================================= */
+
+.spinner {
+position: absolute;
+z-index: 10;
+}
+
+/* =========================================
+TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+.otp_page_left {
+width: 46%;
+height: 100%;
+padding-top: 2.5rem;
+}
+.taskflow_left_img{
+   min-height: 100vh;
+}
+
+.otp_page_right {
+    width: 55%;
+    padding: 28px;
+}
+
+.data_wrapper {
+    padding: 40px 24px;
+    gap: 30px;
+}
+
+.otp_box_wrapper {
+    gap: 9px;
+}
+
+.otp_box_wrapper input {
+    height: 54px;
+    font-size: 1.3rem;
+}
+
+}
+
+/* =========================================
+MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+.otp_page_container {
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+padding: 24px 16px;
+background: linear-gradient(
+135deg,
+#eef2ff,
+#f8faff,
+#ede9fe
+);
+}
+
+.otp_page_left {
+    display: none;
+}
+
+.otp_page_right {
+    width: 100%;
+    min-height: auto;
+    padding-top:2.7rem;
+    background: transparent;
+}
+
+.data_wrapper {
+    width: 100%;
+    max-width: 440px;
+    min-height: 330px;
+    padding: 38px 22px;
+    gap: 30px;
+    border-radius: 22px;
+    padding-top: 2.8rem;
+}
+
+.otp_box_wrapper {
+    gap: 9px;
+}
+
+.otp_box_wrapper input {
+    height: 54px;
+    max-width: 54px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+}
+
+.otp_submit_btn {
+    font-size: 0.9rem;
+}
+
+}
+
+/* =========================================
+SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+.otp_page_container {
+padding: 18px 12px;
+}
+
+.data_wrapper {
+    padding: 32px 14px;
+    gap: 26px;
+    padding-top: 3rem;
+}
+
+.otp_box_wrapper {
+    gap: 6px;
+}
+
+.otp_box_wrapper input {
+    height: 48px;
+    max-width: 46px;
+    border-radius: 9px;
+    font-size: 1.15rem;
+}
+
+.otp_submit_btn {
+    min-height: 49px;
+    font-size: 0.7rem;
+}
+
+.resend_otp_btn {
+    font-size: 0.8rem;
+}
+
+}
+
+/* =========================================
+ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+*,
+*::before,
+*::after {
+transition: none !important;
+animation: none !important;
+}
+}

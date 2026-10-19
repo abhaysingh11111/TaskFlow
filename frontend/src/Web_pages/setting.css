@@ -1,0 +1,326 @@
+
+/* =====================================
+   SETTINGS PAGE
+===================================== */
+
+.setting_Wrappor {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 16px;
+    padding: 125px 20px 40px;
+
+    background: #f8fafc;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =====================================
+   ACCOUNT SETTINGS CARD
+===================================== */
+
+.accountSetting_wrappor {
+    width: 100%;
+    max-width: 680px;
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.accountSetting_wrappor:hover {
+    border-color: #c7d2fe;
+    box-shadow: 0 8px 24px rgba(79, 70, 229, 0.07);
+}
+
+
+/* Account settings heading */
+
+.accountSettinghead {
+    width: 100%;
+    min-height: 76px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    padding: 20px 24px;
+}
+
+.accountSettinghead h2 {
+    margin: 0;
+
+    color: #1e293b;
+    font-size: 18px;
+    font-weight: 650;
+}
+
+
+/* Expand / collapse icon */
+
+.accountSettinghead i {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    background: #eef2ff;
+    color: #4f46e5;
+
+    cursor: pointer;
+    transition: background 0.2s ease,
+                transform 0.2s ease;
+}
+
+.accountSettinghead i:hover {
+    background: #e0e7ff;
+    transform: scale(1.05);
+}
+
+
+/* =====================================
+   EXPANDED ACCOUNT SETTINGS
+===================================== */
+
+.accountSetting_expand {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    padding: 0 16px 12px;
+
+    background: #ffffff;
+    border-top: 1px solid #f1f5f9;
+}
+
+
+/* Links inside account settings */
+
+.accountSetting_expand a {
+    display: block;
+    padding: 15px 12px;
+
+    border-bottom: 1px solid #f1f5f9;
+
+    color: #475569;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+
+    transition: color 0.2s ease,
+                background 0.2s ease,
+                padding-left 0.2s ease;
+}
+
+.accountSetting_expand a:last-child {
+    border-bottom: none;
+}
+
+.accountSetting_expand a:hover {
+    padding-left: 18px;
+    background: #f8faff;
+    color: #4f46e5;
+}
+
+
+/* =====================================
+   MAIN SETTINGS LINKS
+   Notifications / Help / About
+===================================== */
+
+.setting_Wrappor > a {
+    position: relative;
+
+    width: 100%;
+    max-width: 680px;
+    min-height: 68px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding: 20px 24px;
+
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+
+    color: #334155;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.025);
+
+    transition: transform 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                color 0.2s ease;
+}
+
+
+/* Right arrow */
+
+.setting_Wrappor > a::after {
+    content: "›";
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+
+    border-radius: 9px;
+    background: #f1f5f9;
+    color: #64748b;
+
+    font-size: 25px;
+    font-weight: 400;
+
+    transition: background 0.2s ease,
+                color 0.2s ease;
+}
+
+
+/* Hover effects */
+
+.setting_Wrappor > a:hover {
+    transform: translateY(-2px);
+
+    border-color: #c7d2fe;
+    color: #4f46e5;
+
+    box-shadow: 0 7px 20px rgba(79, 70, 229, 0.07);
+}
+
+.setting_Wrappor > a:hover::after {
+    background: #eef2ff;
+    color: #4f46e5;
+}
+
+
+/* Keyboard accessibility */
+
+.setting_Wrappor a:focus-visible,
+.accountSettinghead i:focus-visible {
+    outline: 3px solid rgba(99, 102, 241, 0.35);
+    outline-offset: 3px;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 768px) {
+    .setting_Wrappor {
+        padding: 105px 18px 30px;
+        gap: 14px;
+    }
+
+    .accountSettinghead {
+        min-height: 68px;
+        padding: 17px 20px;
+    }
+
+    .accountSettinghead h2 {
+        font-size: 17px;
+    }
+
+    .setting_Wrappor > a {
+        min-height: 64px;
+        padding: 17px 20px;
+        font-size: 15px;
+    }
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 480px) {
+    .setting_Wrappor {
+        padding: 90px 12px 25px;
+        gap: 12px;
+    }
+
+    .accountSetting_wrappor {
+        border-radius: 13px;
+    }
+
+    .accountSettinghead {
+        min-height: 62px;
+        padding: 14px 16px;
+    }
+
+    .accountSettinghead h2 {
+        font-size: 16px;
+    }
+
+    .accountSettinghead i {
+        width: 32px;
+        height: 32px;
+    }
+
+    .accountSetting_expand {
+        padding: 0 12px 8px;
+    }
+
+    .accountSetting_expand a {
+        padding: 13px 10px;
+        font-size: 14px;
+    }
+
+    .setting_Wrappor > a {
+        min-height: 60px;
+        padding: 15px 16px;
+        border-radius: 12px;
+        font-size: 14px;
+    }
+
+    .setting_Wrappor > a::after {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .accountSetting_wrappor,
+    .accountSettinghead i,
+    .accountSetting_expand a,
+    .setting_Wrappor > a,
+    .setting_Wrappor > a::after {
+        transition: none;
+    }
+}

@@ -1,0 +1,59 @@
+.form_bodyyyy{
+    display: flex;justify-content: center;align-items: center;
+   background-color: rgb(236, 235, 235);
+   min-height: 100vh;
+   width: 100%;
+   padding-top: 5.5rem;
+}
+.wrappor_update{
+    display: flex;flex-direction: column; align-items: center;justify-content: center;
+    width: 40%;
+    height: 100%;
+    gap: 2rem;
+    box-shadow: 4px 4px 15px gray;
+    border: none;
+    border-radius: 1rem;
+    background-color: rgb(255, 253, 251);
+}
+.new_pas_ibx ,.confirm_pas_ibx{
+    padding-left: 1rem;
+    width: 90%;
+    font-size: 0.8rem;
+    height: 2.6rem;
+    border: none;outline: none;
+
+}
+
+.submit_btn{
+    width: 85%;
+    color: rgb(255, 255, 255);
+    font-size: 1.1rem ;
+    height: 2.4rem;
+background-color: rgb(88, 111, 226);
+    border-radius: 999px;
+}
+.app_icn{
+    width: 3.8rem;height:3.8rem ;margin-top: 1rem;
+    border-radius: 1rem ; border: 2px solid rgb(187, 187, 187);
+
+}
+.newPassinputBoxwrapper,.confirmNewpassInputboxWrapper{
+  width: 80%;
+  border-radius: 15px;overflow: hidden;
+  border: 1px solid rgb(86, 86, 86);
+    display: flex;justify-content: center;align-items: center;
+    gap: 10px;
+}
+.PasswordEyewrapper,.confirmPasswordEyewrapper{
+   width: 1rem;
+}
+@media (max-width:800px) {
+    .wrappor_update{
+        width: 60%;
+    }
+}
+@media (max-width:500px) {
+    .wrappor_update{
+        width: 80%;
+    }
+}

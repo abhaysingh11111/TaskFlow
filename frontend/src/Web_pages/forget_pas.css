@@ -1,0 +1,243 @@
+/* ========================================
+TASKFLOW FORGOT PASSWORD PAGE
+Modern Light Theme
+======================================== */
+
+.email_input_form {
+    padding-top: 5rem;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+overflow: hidden;
+min-height: 100vh;
+box-sizing: border-box;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+font-family: "Inter", "Segoe UI", Arial, sans-serif;
+
+}
+/* MAIN FORM CARD */
+
+.input_wrappor {
+    padding-top:1rem ;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 30px;
+width:23rem ;
+min-height: 530px;
+box-sizing: border-box;
+margin: 0;
+border: 1px solid #e2e8f0;
+border-radius: 24px;
+background: rgba(255, 255, 255, 0.97);
+box-shadow: 0 20px 60px rgba(30, 41, 59, 0.12);
+}
+
+/* HEADER SECTION */
+
+.headWrappor {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 16px;
+width: 100%;
+text-align: center;
+
+}
+
+/* ENVELOPE LOGO CIRCLE */
+
+.envolop_logo_wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100px;
+height: 100px;
+flex-shrink: 0;
+
+border-radius: 50%;
+background: linear-gradient(135deg, #ede9fe, #dbeafe);
+box-shadow: 0 8px 24px rgba(99, 102, 241, 0.12);
+
+}
+
+.envolop_logo {
+width: 130px;
+height: 130px;
+object-fit: contain;
+border-radius: 12px;
+}
+
+/* MAIN HEADING */
+
+.heading {
+margin: 0;
+color: #1e293b;
+font-size: 1.6rem;
+font-weight: 800;
+line-height: 1.3;
+letter-spacing: -0.8px;
+
+}
+
+/* SUBHEADING */
+
+.subheading {
+margin: 0;
+color: #64748b;
+font-size: 0.9rem;
+font-weight: 400;
+line-height: 1.8;
+
+}
+
+/* EMAIL INPUT SECTION */
+
+.email_input_wrapper {
+display: flex;
+flex-direction: column;
+align-items:center ;
+gap: 10px;
+width: 100%;
+color: #334155;
+font-size: 0.95rem;
+font-weight: 700;
+
+}
+.EmailAddressText{
+    color: #393839;
+    width: 90%;
+    text-align: left;
+}
+/* INPUT AND MAIL ICON WRAPPER */
+
+.email_inputboxWrapper {
+display: flex;
+align-items: center;
+gap: 0.7rem;
+width: 90%;
+min-height: 56px;
+box-sizing: border-box;
+
+border: 1.5px solid #dbe2ee;
+border-radius: 60px;
+
+background: white;
+}
+
+.email_inputboxWrapper:focus-within {
+border-color: #6366f1;
+background: #ffffff;
+box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+/* EMAIL ICON */
+
+.email_icon {
+flex-shrink: 0;
+margin-left: 15px;
+
+color: #6366f1;
+font-size: 1.2rem;
+
+}
+
+/* EMAIL INPUT */
+
+.email_input_box {
+flex: 1;
+max-height: 70px;
+box-sizing: border-box;
+width: 100%;
+
+outline: none;
+border: none;
+border-radius: 12px;
+
+background: transparent;
+color: #1e293b;
+font-family: inherit;
+font-size: 0.8rem;
+
+}
+
+.email_input_box::placeholder {
+color: #94a3b8;
+opacity: 1;
+}
+
+/* SUBMIT BUTTON */
+
+.email_Submit_btn {
+width: 90%;
+height: 46px;
+box-sizing: border-box;
+padding: 14px 20px;
+border: none;
+border-radius: 12px;
+background: linear-gradient(100deg, #7c3aed, #4f46e5, #2563eb);
+color: #ffffff;
+font-family: inherit;
+font-size: 1rem;
+font-weight: 700;
+padding-bottom: 1.8rem;
+cursor: pointer;
+box-shadow: 0 8px 20px rgba(79, 70, 229, 0.22);
+
+transition: transform 0.25s ease, box-shadow 0.25s ease,
+    filter 0.25s ease;
+
+}
+
+.email_Submit_btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 12px 26px rgba(31, 19, 255, 0.466);
+filter: brightness(1.05);
+}
+
+.email_Submit_btn:active {
+transform: translateY(0);
+}
+
+.email_Submit_btn:focus-visible {
+outline: 3px solid #a5b4fc;
+outline-offset: 4px;
+}
+
+/* ERROR BOX */
+
+.err_box {
+position: absolute;
+bottom: 20px;
+left: 50%;
+transform: translateX(-50%);
+}
+
+/* DISABLED FORM WHILE LOADING */
+
+.input_wrappor:disabled {
+opacity: 0.8;
+}
+@media (max-width:525px) {
+    .input_wrappor{
+        background-color: #efeff0;
+        width: 90%;
+        gap: 1.9rem;
+    }
+    .heading{
+        font-size: 1.3rem;
+    }
+    .subheading{
+        font-size: 0.8rem;
+    }
+    .EmailAddressText{
+        font-size: 0.8rem;
+        padding-left: 5px;
+    }
+
+}

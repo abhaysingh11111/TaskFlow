@@ -1,0 +1,417 @@
+
+/* =====================================
+   MAIN NAVBAR
+===================================== */
+
+.Main_nav_body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 3.5rem;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    background-color: #fffefe;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* =====================================
+   LEFT NAVBAR
+===================================== */
+
+.left_nav_wrappor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2.5rem;
+    min-width: 0;
+}
+
+/* LOGO CONTAINER */
+
+.app_icon_wrappor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 4.5rem;
+    height: 3.2rem;
+    overflow: hidden;
+    border-radius: 35%;
+    border:1px solid #bcbcbd;
+    cursor: pointer;
+}
+
+/* LOGO IMAGE */
+
+.app_icen {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    object-fit: contain;
+}
+
+/* =====================================
+   NAVIGATION LINKS
+===================================== */
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.link {
+    color: #1b4332;
+    text-decoration: none;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+.link:hover {
+    color: #ff7a18;
+}
+
+/* DASHBOARD */
+
+.dashboardWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.4rem;
+
+    color: #07011c;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.dashboardLink {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.taskLink {
+    color: #07011c;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.dashboardWrapper:hover,
+.taskLink:hover,
+.historyWrapper:hover {
+    color: #ff7a18;
+}
+
+/* =====================================
+   RIGHT NAVBAR
+===================================== */
+
+.right_nav_wrappor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1.5rem;
+    flex-shrink: 0;
+}
+
+/* LOGIN AND SIGNUP */
+
+.login_link,
+.sign_up_liink {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 5rem;
+    height: 2.1rem;
+    padding: 0 0.8rem;
+
+    box-sizing: border-box;
+
+    background: #ff7a18;
+    color: #ffffff;
+
+    border: 1px solid #ff7a18;
+    border-radius: 0.5rem;
+
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.login_link:hover,
+.sign_up_liink:hover {
+    background-color: #e9680a;
+    transform: translateY(-1px);
+}
+
+/* HISTORY */
+
+.historyWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.4rem;
+
+    color: #07011c;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.historyWrapper h3 {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* SETTINGS AND PROFILE ICONS */
+
+#setting_icon,
+#user_profile_icon {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: #2859cf;
+    transition: color 0.2s ease;
+}
+
+#setting_icon:hover,
+#user_profile_icon:hover {
+    color: #ff7a18;
+}
+
+/* LANGUAGE SELECTOR */
+
+.lang_selector {
+    width: 7rem;
+    height: 2.4rem;
+}
+
+/* HAMBURGER */
+
+#hamburger_icn {
+    display: none;
+    font-size: 1.8rem;
+    color: #2859cf;
+    cursor: pointer;
+}
+
+/* =====================================
+   LAPTOP
+===================================== */
+
+@media screen and (max-width: 1100px) {
+    .Main_nav_body {
+        padding: 0 1.25rem;
+    }
+
+    .left_nav_wrappor {
+        gap: 1.5rem;
+    }
+
+    .links {
+        gap: 1.25rem;
+    }
+
+    .right_nav_wrappor {
+        gap: 1rem;
+    }
+}
+
+/* =====================================
+   TABLET AND MOBILE
+===================================== */
+
+@media screen and (max-width: 720px) {
+    .Main_nav_body {
+        height: 3.6rem;
+        padding: 0 1rem;
+        gap: 0.75rem;
+    }
+
+    .left_nav_wrappor {
+        gap: 1rem;
+        padding-left: 0;
+    }
+    .app_icon_wrappor {
+        width: 4rem;
+        height: 2.8rem;
+    }
+
+    .links {
+        gap: 0.8rem;
+    }
+
+    .link {
+        font-size: 0.9rem;
+    }
+
+    .right_nav_wrappor {
+        gap: 0.75rem;
+    }
+
+    .login_link,
+    .sign_up_liink {
+        min-width: auto;
+        height: 2.25rem;
+        padding: 0 0.65rem;
+        font-size: 0.9rem;
+    }
+
+    .historyWrapper h3 {
+        font-size: 0.85rem;
+    }
+
+    .dashboardLink,
+    .taskLink {
+        font-size: 0.85rem;
+    }
+}
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media screen and (max-width: 480px) {
+    .Main_nav_body {
+        padding: 0 0.75rem;
+    }
+
+    .left_nav_wrappor {
+        gap: 0.6rem;
+    }
+
+    .app_icon_wrappor {
+        width: 3.2rem;
+        height: 2.5rem;
+    }
+
+    .links {
+        gap: 0.65rem;
+    }
+
+    .link {
+        font-size: 0.8rem;
+    }
+
+    .right_nav_wrappor {
+        gap: 0.5rem;
+    }
+
+    .login_link,
+    .sign_up_liink {
+        height: 2rem;
+        padding: 0 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .historyWrapper {
+        gap: 0.25rem;
+    }
+
+    .historyWrapper h3 {
+        font-size: 0.8rem;
+    }
+
+    #setting_icon,
+    #user_profile_icon {
+        font-size: 1.2rem;
+    }
+}
+
+/* =====================================
+   EXTRA SMALL MOBILE
+===================================== */
+
+
+@media (max-width:570px) {
+    .right_nav_wrappor{
+       display: none;
+    }
+    .hangburger_wrapper{
+        display: block !important;
+    }
+    .right_nav_wrappor.vertical {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 25px;
+
+    padding: 90px 25px 25px;
+    box-sizing: border-box;
+
+    background: rgb(237, 236, 236);
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.15);
+
+    transform: translateX(0); /* Changed */
+    visibility: visible;      /* Added */
+
+    transition:
+        transform 0.3s ease,
+        visibility 0.3s ease;
+
+    z-index: 1000;
+}
+}
+
+
+@media screen and (max-width: 360px) {
+    .Main_nav_body {
+        padding: 0 0.5rem;
+        gap: 0.4rem;
+    }
+    .right_nav_wrappor.vertical {
+        width: 11.5rem;
+    }
+    .left_nav_wrappor {
+        gap: 0.4rem;
+    }
+
+    .app_icon_wrappor {
+        width: 2.8rem;
+        height: 2.3rem;
+    }
+
+    .links {
+        gap: 0.4rem;
+    }
+
+    .link {
+        font-size: 0.72rem;
+    }
+
+    .right_nav_wrappor {
+        gap: 0.35rem;
+    }
+
+    .login_link,
+    .sign_up_liink {
+        padding: 0 0.35rem;
+        font-size: 0.72rem;
+    }
+}

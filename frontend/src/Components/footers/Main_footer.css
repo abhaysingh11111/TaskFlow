@@ -1,0 +1,379 @@
+
+/* =====================================
+   FOOTER MAIN CONTAINER
+===================================== */
+
+.Footer_wrappor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 20rem;
+    padding: 1.5rem 2rem;
+    gap: 2.5rem;
+
+    box-sizing: border-box;
+    background-color: #df8536;
+}
+
+/* =====================================
+   TOP FOOTER / LOGO
+===================================== */
+
+.top_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.app_logo {
+    display: block;
+
+    width: 4rem;
+    height: 3.5rem;
+
+    object-fit: contain;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.head_top {
+    margin: 0;
+
+    font-size: 2rem;
+    font-weight: 800;
+
+    color: #ffffff;
+}
+
+/* =====================================
+   MIDDLE FOOTER
+===================================== */
+
+.middle_wrappor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 100%;
+    gap: clamp(3rem, 12vw, 14rem);
+}
+
+/* FOOTER COLUMNS */
+
+.middle1,
+.middle2,
+.middle3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+    min-width: 0;
+}
+
+/* COLUMN HEADINGS */
+
+.head1,
+.head2,
+.head3 {
+    color: #ffffff;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* COLUMN LINKS */
+
+.link1,
+.link2,
+.link3 {
+    color: #fff4df;
+
+    font-size: 0.9rem;
+    text-decoration: none;
+    text-align: center;
+
+    transition: color 0.2s ease;
+}
+
+.link1:hover,
+.link2:hover,
+.link3:hover {
+    color: #5a2808;
+}
+
+/* =====================================
+   BOTTOM FOOTER
+===================================== */
+
+.bottom_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    width: 100%;
+}
+
+/* TERMS AND PRIVACY */
+
+.terms_privacy_link {
+    color: #ffffff;
+
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+
+    transition: color 0.2s ease;
+}
+
+.terms_privacy_link:hover {
+    color: #5a2808;
+}
+
+/* =====================================
+   SOCIAL ICON CONTAINERS
+===================================== */
+
+.yt_icn_box,
+.insta_icn_box,
+.fb_icn_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    background-color: #ffffff;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.yt_icn_box:hover,
+.insta_icn_box:hover,
+.fb_icn_box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* SOCIAL ICONS */
+
+#yt_icn,
+#insta_icn,
+#fb_icn {
+    font-size: 1.4rem;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media screen and (max-width: 900px) {
+
+    .Footer_wrappor {
+        min-height: auto;
+        padding: 2rem 1.5rem;
+        gap: 2rem;
+    }
+
+    .middle_wrappor {
+        gap: clamp(2rem, 8vw, 5rem);
+    }
+
+    .head1,
+    .head2,
+    .head3 {
+        font-size: 1rem;
+    }
+
+    .bottom_footer {
+        gap: 1.25rem;
+    }
+
+    .terms_privacy_link {
+        font-size: 0.95rem;
+    }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media screen and (max-width: 600px) {
+
+    .Footer_wrappor {
+        width: 100%;
+        min-height: auto;
+
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    /* TOP SECTION */
+
+    .top_footer {
+        gap: 0.75rem;
+    }
+
+    .app_logo {
+        width: 3.2rem;
+        height: 3rem;
+    }
+
+    .head_top {
+        font-size: 1.6rem;
+    }
+
+    /* THREE COLUMNS IN ONE ROW */
+
+    .middle_wrappor {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        width: 100%;
+        gap: 0.75rem;
+    }
+
+    .middle1,
+    .middle2,
+    .middle3 {
+        flex: 1;
+        min-width: 0;
+        gap: 0.75rem;
+    }
+
+    .head1,
+    .head2,
+    .head3 {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .link1,
+    .link2,
+    .link3 {
+        font-size: 0.8rem;
+        line-height: 1.5;
+
+        overflow-wrap: anywhere;
+    }
+
+    /* BOTTOM SECTION */
+
+    .bottom_footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .terms_privacy_link {
+        width: 100%;
+
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    /* SOCIAL ICONS */
+
+    .yt_icn_box,
+    .insta_icn_box,
+    .fb_icn_box {
+        width: 2.3rem;
+        height: 2.3rem;
+    }
+
+    #yt_icn,
+    #insta_icn,
+    #fb_icn {
+        font-size: 1.25rem;
+    }
+}
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media screen and (max-width: 360px) {
+
+    .Footer_wrappor {
+        padding: 1.5rem 0.75rem;
+        gap: 1.5rem;
+    }
+
+    .head_top {
+        font-size: 1.4rem;
+    }
+
+    .app_logo {
+        width: 2.8rem;
+        height: 2.6rem;
+    }
+
+    .middle_wrappor {
+        gap: 0.4rem;
+    }
+
+    .middle1,
+    .middle2,
+    .middle3 {
+        gap: 0.6rem;
+    }
+
+    .head1,
+    .head2,
+    .head3 {
+        font-size: 0.75rem;
+    }
+
+    .link1,
+    .link2,
+    .link3 {
+        font-size: 0.72rem;
+    }
+
+    .bottom_footer {
+        gap: 0.75rem;
+    }
+
+    .terms_privacy_link {
+        font-size: 0.82rem;
+    }
+}
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .yt_icn_box,
+    .insta_icn_box,
+    .fb_icn_box {
+        transition: none;
+    }
+}

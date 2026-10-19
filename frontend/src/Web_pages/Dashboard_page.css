@@ -1,0 +1,481 @@
+/* ==============================
+   TASKFLOW DASHBOARD
+   Modern SaaS Dashboard UI
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+.main_containor {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+padding-top: 5rem;
+    background: #f5f7fc;
+    color: #1e293b;
+    font-family: Inter, "Segoe UI", sans-serif;
+}
+
+/* ==============================
+   TOP SECTION - SUMMARY CARDS
+================================ */
+
+.top-Section {
+    width: 100%;
+    height: auto;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+
+    background: transparent;
+}
+
+/* Common card styling */
+
+.first_Card,
+.second_Card,
+.third_Card,
+.fourth_Card {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 170px;
+    height: auto;
+    padding: 1.4rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+
+    background: #ffffff;
+    border: 1px solid #e8edf5;
+    border-radius: 1.2rem;
+
+    box-shadow: 0 5px 20px rgba(30, 41, 59, 0.045);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+/* Different accent colors */
+
+.first_Card {
+    border-top: 4px solid #6366f1;
+}
+
+.second_Card {
+    border-top: 4px solid #10b981;
+}
+
+.third_Card {
+    border-top: 4px solid #f59e0b;
+}
+
+.fourth_Card {
+    border-top: 4px solid #f43f5e;
+}
+
+/* Hover animation */
+
+.first_Card:hover,
+.second_Card:hover,
+.third_Card:hover,
+.fourth_Card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(30, 41, 59, 0.09);
+    border-color: #dbe3f0;
+}
+
+/* Card headings */
+
+.totalTask,
+.completeTask,
+.pendingTask,
+.incompletedTask {
+    margin: 0 0 0.8rem;
+
+    color: #64748b;
+    font-size: clamp(0.85rem, 1vw, 1rem);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Main numbers */
+
+.totalTaskNumber {
+    margin: 0 0 0.8rem;
+
+    color: #172554;
+    font-size: clamp(1.8rem, 2.2vw, 2.4rem);
+    font-weight: 750;
+    line-height: 1.1;
+}
+
+/* Weekly statistics */
+
+.first_Card_left > div,
+.second_Card_left > div,
+.third_Left > div,
+.fourth_Card > div:first-child > div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+
+    color: #64748b;
+    font-size: 0.8rem;
+}
+
+.first_Card_left > div > div,
+.second_Card_left > div > div,
+.third_Left > div > div,
+.fourth_Card > div:first-child > div > div {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+
+    color: #059669;
+    font-weight: 700;
+}
+
+.weekHeading,
+.fourth_Card h2:not(.incompletedTask) {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+/* Card illustrations */
+
+.total_Task_img,
+.complete_Task_img,
+.pending_Task_img,
+.incompleted_Task_img {
+    display: block;
+
+    width: clamp(2.4rem, 3.5vw, 3.5rem);
+    height: clamp(2.4rem, 3.5vw, 3.5rem);
+
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* ==============================
+   CHARTS SECTION
+================================ */
+
+.mid-graphs-section {
+    width: 100%;
+    min-width: 0;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    align-items: stretch;
+    gap: 1.5rem;
+
+    border: none;
+}
+
+/* Individual chart cards */
+
+.line_chart_section,
+.pie_chart_section {
+    width: 100%;
+    min-width: 0;
+    min-height: 420px;
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 1.5rem;
+
+    background: #ffffff;
+    border: 1px solid #e8edf5;
+    border-radius: 1.2rem;
+
+    box-shadow: 0 5px 20px rgba(30, 41, 59, 0.045);
+}
+
+/* Chart headings */
+
+.line_chart-left-description,
+.pie_chart-left-description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.weeklyTaskactivityTextGraph,
+.weeklyTaskactivityTextoval {
+    margin: 0 0 0.5rem;
+
+    color: #172554;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.line_chart-left-description h2,
+.pie_chart-left-description h2 {
+    margin: 0;
+
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Chart legends */
+
+.line_chart-left-description > div:last-child,
+.pie_chart-left-description > div:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.line_chart-left-description > div:last-child > div,
+.pie_chart-left-description > div:last-child > div {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+
+    color: #475569;
+    font-size: 0.85rem;
+}
+
+/* Chart canvas containers */
+
+.line_chart_section > div:last-child {
+    position: relative;
+    width: 100%;
+    height: 270px;
+    min-width: 0;
+}
+
+.pie_chart_section > div:last-child {
+    position: relative;
+    width: 100%;
+    height: 270px;
+    min-width: 0;
+}
+
+/* Chart.js canvas */
+
+.line-chart,
+.pie-chart {
+    display: block;
+    max-width: 100%;
+}
+
+/* ==============================
+   BOTTOM SECTION
+================================ */
+
+.bottom-section {
+    width: 100%;
+    padding: 1.5rem 1.75rem;
+
+    background: linear-gradient(120deg, #4f46e5, #7c3aed);
+    border-radius: 1.2rem;
+
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.18);
+}
+
+.bottom-section h2 {
+    margin: 0;
+
+    color: #ffffff;
+    font-size: 1.15rem;
+    font-weight: 650;
+}
+
+/* ==============================
+   TABLETS
+================================ */
+
+@media screen and (max-width: 1100px) {
+    .main_containor {
+        gap: 1.5rem;
+    }
+
+    .top-Section {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .mid-graphs-section {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .line_chart_section,
+    .pie_chart_section {
+        min-height: 0;
+    }
+
+    .line_chart_section > div:last-child,
+    .pie_chart_section > div:last-child {
+        height: 300px;
+    }
+}
+
+/* ==============================
+   MOBILE
+================================ */
+
+@media screen and (max-width: 600px) {
+    .main_containor {
+        gap: 1.25rem;
+    }
+
+    .top-Section {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+    }
+
+    .first_Card,
+    .second_Card,
+    .third_Card,
+    .fourth_Card {
+        min-height: 145px;
+        padding: 0.9rem;
+        gap: 0.4rem;
+        border-radius: 0.9rem;
+    }
+
+    .totalTask,
+    .completeTask,
+    .pendingTask,
+    .incompletedTask {
+        font-size: 0.8rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .totalTaskNumber {
+        font-size: 1.7rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .total_Task_img,
+    .complete_Task_img,
+    .pending_Task_img,
+    .incompleted_Task_img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .first_Card_left > div,
+    .second_Card_left > div,
+    .third_Left > div,
+    .fourth_Card > div:first-child > div {
+        font-size: 0.4rem;
+        gap: 0.2rem;
+    }
+
+    .weekHeading,
+    .fourth_Card h2:not(.incompletedTask) {
+        font-size: 0.68rem;
+    }
+
+    .mid-graphs-section {
+        gap: 1rem;
+    }
+
+    .line_chart_section,
+    .pie_chart_section {
+        padding: 1rem;
+        gap: 1.2rem;
+        border-radius: 1rem;
+    }
+
+    .weeklyTaskactivityTextGraph,
+    .weeklyTaskactivityTextoval {
+        font-size: 1.1rem;
+    }
+
+    .line_chart-left-description h2,
+    .pie_chart-left-description h2 {
+        font-size: 0.78rem;
+    }
+
+    .line_chart_section > div:last-child,
+    .pie_chart_section > div:last-child {
+        height: 250px;
+    }
+
+    .bottom-section {
+        padding: 1.2rem;
+    }
+
+    .bottom-section h2 {
+        font-size: 1rem;
+    }
+}
+
+/* Very narrow phones */
+
+@media screen and (max-width: 360px) {
+    .main_containor {
+       margin-top: 0.1rem;background-color: #a4afd4;
+
+    }
+
+    .first_Card,
+    .second_Card,
+    .third_Card,
+    .fourth_Card {
+        min-height: 140px;
+        width: 11.5rem;
+    }
+
+    .totalTaskNumber {
+        font-size: 1.5rem;
+    }
+
+    .total_Task_img,
+    .complete_Task_img,
+    .pending_Task_img,
+    .incompleted_Task_img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .line_chart_section > div:last-child,
+    .pie_chart_section > div:last-child {
+        height: 220px;
+    }
+}
+
+/* Respect reduced-motion preference */
+
+@media (prefers-reduced-motion: reduce) {
+    .first_Card,
+    .second_Card,
+    .third_Card,
+    .fourth_Card {
+        transition: none;
+    }
+}
+@media screen and (max-width:450px) {
+    .top-Section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+flex-direction: column;
+    }
+}

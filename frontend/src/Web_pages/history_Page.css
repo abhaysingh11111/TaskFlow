@@ -1,0 +1,164 @@
+
+/* =================================
+   HISTORY PAGE
+================================= */
+
+.historyyWrapper {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+    padding: 120px 24px 40px;
+
+    background: #f8fafc;
+    color: #1e293b;
+    font-family: Arial, sans-serif;
+}
+
+.taskHistoryheading{
+    background-color: #ffffff;color: #4c40f9;
+    width: 83%;text-align: left;padding-left: 10px;font-weight: 800
+}
+/* =================================
+   PAGE HEADING
+================================= *
+
+
+/* =================================
+   INITIAL LOADING
+================================= */
+
+.initial_Loading_wrappor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    padding: 30px 15px;
+    color: #64748b;
+    font-size: 15px;
+}
+
+
+/* =================================
+   TASK HISTORY CARD
+================================= */
+.HistoryPageTaskWrapper {
+   display: flex;background-color: #ececed;
+   justify-content: center;align-items: center;
+       width: 83%;gap: 40%;border-radius: 0.5rem;
+           min-height: 60px;
+}
+.HistoryPageTaskWrapper:hover {
+    transform: translateY(-2px);
+    border-color: #c7d2fe;
+    box-shadow: 0 8px 20px rgba(180, 180, 188, 0.833);
+}
+.statusIndexwrapper{
+    display: flex;gap: 1rem;background-color: #ececed;;
+    flex-wrap: wrap;justify-content: center;flex-direction: column;
+    width: 30%; padding-right: 5px;
+}
+.historyTask{
+    width: 100%;min-height: 70px;
+    padding-top: 0.5rem;padding-left: 15px;
+    white-space: normal;    overflow-wrap: anywhere;background-color: #ececed;
+    text-align: left;
+}
+
+/* =================================
+   NO TASK MESSAGE
+================================= */
+
+.historyyWrapper > div:not(.HistoryPageTaskWrapper):not(.initial_Loading_wrappor) {
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+
+    padding: 35px 20px;
+
+    border: 1px dashed #cbd5e1;
+    border-radius: 14px;
+
+    background: #ffffff;
+    color: #64748b;
+
+    font-size: 16px;
+    text-align: center;
+}
+
+
+/* =================================
+   BOTTOM LOADING
+================================= */
+
+.historyyWrapper > :last-child {
+    flex-shrink: 0;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 768px) {
+    .historyyWrapper {
+        gap: 14px;
+        padding: 105px 18px 30px;
+    }
+
+    .historyyWrapper > h2 {
+        font-size: 26px;
+    }
+.statusIndexwrapper span{
+           font-size: 15px;
+
+}
+    .HistoryPageTaskWrapper > span:first-child {
+        font-size: 15px;
+    }
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 480px) {
+    .historyyWrapper {
+        padding: 90px 12px 25px;
+        padding-top: 5rem;
+    }
+
+    .historyyWrapper > h2 {
+        margin-bottom: 4px;
+        padding-bottom: 12px;
+        font-size: 23px;
+    }
+.historyTask{
+padding-top: 0.8rem;
+}
+    .HistoryPageTaskWrapper {
+        gap: 10px 12px;
+
+        min-height: auto;
+
+        border-radius: 12px;
+    }
+}
+
+
+/* =================================
+   ACCESSIBILITY
+================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .HistoryPageTaskWrapper {
+        transition: none;
+    }
+}

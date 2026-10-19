@@ -1,0 +1,506 @@
+
+.loginFormBody {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    background-color: #fafbfd;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 15px;
+margin-top: 75px;
+    font-family: Arial, sans-serif;
+}
+
+
+/* ==========================================
+   LOGIN CARD
+========================================== */
+
+.login_form_wrapper {
+    width: 100%;
+    max-width: 460px;
+    min-width: 0;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+
+    margin: 0;
+    padding: 32px;
+
+    border: 1px solid #e0e6f0;
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    box-shadow:
+        0 15px 40px rgba(30, 41, 59, 0.10),
+        0 2px 6px rgba(30, 41, 59, 0.03);
+}
+
+
+/* ==========================================
+   APP LOGO
+========================================== */
+
+.app_icon {
+    display: block;
+
+    width: 75px;
+    height: 77px;
+
+    border-radius: 20px;border: 2px solid rgb(223, 216, 216);
+}
+
+
+/* ==========================================
+   WELCOME HEADING
+========================================== */
+
+.loginFormMsg_Wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    text-align: center;
+}
+
+.headWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.loginFormLeftHead,
+.loginFormRightHead {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 750;
+    letter-spacing: -0.8px;
+}
+
+.loginFormLeftHead {
+    color: #1e293b;
+}
+
+.loginFormRightHead {
+    color: #6366f1;
+}
+
+.loginForm_subtext {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   USERNAME AND PASSWORD AREA
+========================================== */
+
+.passwordandusernamewrapper {
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 15px;
+}
+
+
+/* Username input */
+
+.usernameInput {
+    width: 100%;
+    height: 49px;
+    box-sizing: border-box;
+
+    padding: 0 15px;
+
+    border: 1px solid #d8e0ec;
+    border-radius: 11px;
+    outline: none;
+
+    background: #f8fafc;
+    color: #1e293b;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+}
+
+.usernameInput::placeholder,
+.passwordInput::placeholder {
+    color: #94a3b8;
+    opacity: 1;
+}
+
+.usernameInput:focus {
+    border-color: #818cf8;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.10);
+}
+
+
+/* ==========================================
+   PASSWORD WRAPPER
+========================================== */
+
+.passwordWrapper {
+    width: 100%;
+    height: 49px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    padding: 0 13px;
+
+    border: 1px solid #d8e0ec;
+    border-radius: 11px;
+
+    background: #f8fafc;
+
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+}
+
+.passwordWrapper:focus-within {
+    border-color: #818cf8;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.10);
+}
+
+.passwordInput {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    padding: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+    color: #1e293b;
+
+    font-family: inherit;
+    font-size: 14px;
+}
+
+
+/* Password eye icons */
+
+.openEye,
+.closeEye {
+    flex-shrink: 0;
+
+    width: 23px;
+    height: 23px;
+
+    display: block;
+
+    color: #64748b;
+    font-size: 23px;
+
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.openEye:hover,
+.closeEye:hover {
+    color: #4f46e5;
+}
+
+
+/* ==========================================
+   LOGIN BUTTON
+========================================== */
+
+.loginBtn {
+    width: 100%;
+    min-height: 49px;
+    box-sizing: border-box;
+
+    padding: 12px 18px;
+
+    border: 1px solid #4f46e5;
+    border-radius: 11px;
+
+    background: linear-gradient(90deg, #6366f1, #4f46e5);
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 14px rgba(79, 70, 229, 0.18);
+
+    transition: background 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.loginBtn:hover {
+    background: linear-gradient(90deg, #4f46e5, #4338ca);
+    box-shadow: 0 8px 18px rgba(79, 70, 229, 0.24);
+    transform: translateY(-1px);
+}
+
+.loginBtn:active {
+    transform: translateY(0);
+}
+
+
+/* ==========================================
+   SIGNUP, FORGOT PASSWORD AND GOOGLE
+========================================== */
+
+.redirect_and_google_wrapper {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+}
+
+.dont_have_acc_wrapper {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.dont_have_acc_text {
+    margin: 0;
+
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.loginSignup_formNavigationLink,
+.forgetPassword_navigationLink {
+    color: #4f46e5;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.loginSignup_formNavigationLink:hover,
+.forgetPassword_navigationLink:hover {
+    color: #3730a3;
+    text-decoration: underline;
+}
+
+
+/* Google login button */
+
+.Google_login_btn {
+    width: 100%;
+    min-height: 47px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 11px 16px;
+
+    border: 1px solid #d8e0ec;
+    border-radius: 11px;
+
+    background: #ffffff;
+    color: #334155;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.Google_login_btn:hover {
+    background: #f8fafc;
+    border-color: #a5b4fc;
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 768px) {
+    .loginFormBody {
+padding-top: 40px;
+    }
+
+    .login_form_wrapper {
+        max-width: 430px;
+        padding: 28px 25px;
+        gap: 21px;
+        border-radius: 20px;
+    }
+
+    .app_icon {
+        width: 72px;
+        height: 72px;
+    }
+
+    .loginFormLeftHead,
+    .loginFormRightHead {
+        font-size: 29px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+    .loginFormBody {
+        padding: 47px 12px 25px;
+    }
+
+    .login_form_wrapper {
+        width: 100%;
+        max-width: 390px;
+
+        padding: 25px 18px;
+        gap: 19px;
+
+        border-radius: 17px;
+    }
+
+    .app_icon {
+        width: 65px;
+        height: 65px;
+    }
+
+    .loginFormLeftHead,
+    .loginFormRightHead {
+        font-size: 26px;
+    }
+
+    .loginForm_subtext {
+        font-size: 12px;
+    }
+
+    .passwordandusernamewrapper {
+        gap: 12px;
+    }
+
+    .usernameInput,
+    .passwordWrapper {
+        height: 46px;
+    }
+
+    .usernameInput {
+        padding: 0 12px;
+        font-size: 13px;
+    }
+
+    .passwordWrapper {
+        padding: 0 11px;
+        gap: 8px;
+    }
+
+    .passwordInput {
+        font-size: 13px;
+    }
+
+    .openEye,
+    .closeEye {
+        width: 21px;
+        height: 21px;
+        font-size: 21px;
+    }
+
+    .loginBtn {
+        min-height: 46px;
+        font-size: 14px;
+    }
+
+    .redirect_and_google_wrapper {
+        gap: 15px;
+    }
+
+    .Google_login_btn {
+        min-height: 45px;
+        font-size: 13px;
+    }
+
+    .dont_have_acc_text,
+    .loginSignup_formNavigationLink,
+    .forgetPassword_navigationLink {
+        font-size: 12px;
+    }
+}
+
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+.login_form_wrapper button:focus-visible,
+.login_form_wrapper a:focus-visible,
+.openEye:focus-visible,
+.closeEye:focus-visible {
+    outline: 3px solid rgba(99, 102, 241, 0.30);
+    outline-offset: 3px;
+}
+
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    .usernameInput,
+    .passwordWrapper,
+    .openEye,
+    .closeEye,
+    .loginBtn,
+    .loginSignup_formNavigationLink,
+    .forgetPassword_navigationLink,
+    .Google_login_btn {
+        transition: none;
+    }
+}

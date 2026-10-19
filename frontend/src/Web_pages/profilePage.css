@@ -1,0 +1,432 @@
+
+/* =====================================
+   PROFILE PAGE
+===================================== */
+
+.profilePage {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 110px 20px 35px;
+
+    background:
+        radial-gradient(circle at top right, #eef2ff 0%, transparent 35%),
+        #f8fafc;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =====================================
+   PROFILE CARD
+===================================== */
+
+.profileFieldset {
+    width: 100%;
+    max-width: 650px;
+    min-width: 0;
+    min-height: 400px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    margin: 0;
+    padding: 35px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =====================================
+   PROFILE IMAGE
+===================================== */
+
+.profileImage_inputWrapper {
+    position: relative;
+
+    width: 120px;
+    height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto;
+}
+
+.profileImg {
+    display: block;
+
+    width: 120px;
+    height: 120px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+
+    box-shadow: 0 0 0 2px #c7d2fe,
+                0 8px 20px rgba(79, 70, 229, 0.12);
+}
+
+
+/* Image upload input */
+
+.profileImage_input {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+/* =====================================
+   PROFILE DETAILS
+===================================== */
+
+.profileFieldset > div:not(.profileImage_inputWrapper) {
+    width: 100%;
+    max-width: 480px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 22px;
+}
+
+
+/* Name and email rows */
+
+.nameWrapper,
+.emailWrapper {
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.nameWrapper > h2,
+.emailWrapper > h2:first-child {
+    flex-shrink: 0;
+
+    margin: 0;
+
+    color: #64748b;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* =====================================
+   NAME EDITING
+===================================== */
+
+.ProfileNameInputeditWrapper {
+    flex: 1;
+    min-width: 0;
+}
+
+.profName_Input_editWrapper {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.profName_Input_editWrapper input {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    outline: none;
+
+    background: #f8fafc;
+    color: #1e293b;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+}
+
+.profName_Input_editWrapper input:focus {
+    border-color: #6366f1;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.10);
+}
+
+
+/* Edit pencil button */
+
+.profName_Input_editWrapper button {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+border: none;
+    background: #aab8e9;
+    cursor: pointer;
+    transition: background 0.2s ease,
+                transform 0.2s ease;
+}
+
+
+.profName_Input_editWrapper button:hover {
+    background: #99afff;
+    transform: translateY(-1px);
+    border: none;
+}
+
+/* Save name button */
+
+.editedProfNameWrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+}
+
+.editedProfNameWrapper button {
+    padding: 9px 18px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #4f46e5;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: background 0.2s ease,
+                transform 0.2s ease;
+}
+
+.editedProfNameWrapper button:hover {
+    background: #4338ca;
+    transform: translateY(-1px);
+}
+
+/* =====================================
+   EMAIL
+===================================== */
+.emailWrapper{
+display: flex;justify-content: flex-start;align-items: center;
+}
+.emailWrapper h2{
+    font-size: small;
+    color: rgb(90, 88, 88);
+    font-weight: 450;
+}
+#Emailheading,#nameHeading{
+    color: #0004ff;
+}
+/* =====================================
+   LOGOUT BUTTON
+===================================== */
+
+.logoutButton {
+    align-self: center;
+
+    min-width: 150px;
+    padding: 12px 24px;
+
+    border: none;
+    border-radius: 11px;
+
+    background: #4f46e5;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 12px rgba(79, 70, 229, 0.18);
+
+    transition: background 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.logoutButton:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(79, 70, 229, 0.23);
+}
+
+.logoutButton:active {
+    transform: translateY(0);
+}
+
+
+/* =====================================
+   RETRY BUTTON
+===================================== */
+
+.profileFieldset > button:not(.logoutButton) {
+    padding: 11px 25px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #4f46e5;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.profileFieldset > button:not(.logoutButton):hover {
+    background: #4338ca;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 768px) {
+    .profilePage {
+        padding: 100px 18px 30px;
+    }
+
+    .profileFieldset {
+        max-width: 560px;
+        min-height: 370px;
+        gap: 26px;
+        padding: 28px 24px;
+        border-radius: 20px;
+    }
+
+    .profileImage_inputWrapper,
+    .profileImg {
+        width: 105px;
+        height: 105px;
+    }
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 480px) {
+    .profilePage {
+        padding: 90px 12px 25px;
+    }
+
+    .profileFieldset {
+        min-height: 0;
+        gap: 24px;
+
+        padding: 25px 16px;
+
+        border-radius: 17px;
+    }
+
+    .profileImage_inputWrapper,
+    .profileImg {
+        width: 90px;
+        height: 90px;
+    }
+
+    .profileFieldset > div:not(.profileImage_inputWrapper) {
+        gap: 20px;
+    }
+
+    .nameWrapper,
+    .emailWrapper {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nameWrapper > h2,
+    .emailWrapper > h2:first-child {
+        padding-top: 12px;
+        font-size: 13px;
+    }
+
+    .profName_Input_editWrapper {
+        gap: 6px;
+    }
+
+    .profName_Input_editWrapper input {
+        padding: 11px 9px;
+        font-size: 13px;
+    }
+
+    .profName_Input_editWrapper > button {
+        width: 36px;
+        height: 38px;
+    }
+
+    .emailWrapper > h2:last-child {
+        max-width: 70%;
+        padding-top: 12px;
+        font-size: 12px;
+    }
+
+    .logoutButton {
+        width: 100%;
+        max-width: 220px;
+        padding: 12px 18px;
+    }
+}
+
+
+/* =====================================
+   ACCESSIBILITY
+===================================== */
+
+.profileFieldset button:focus-visible,
+.profileImage_input:focus-visible {
+    outline: 3px solid rgba(99, 102, 241, 0.4);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .profName_Input_editWrapper input,
+    .profName_Input_editWrapper > button,
+    .editedProfNameWrapper button,
+    .logoutButton {
+        transition: none;
+    }
+}

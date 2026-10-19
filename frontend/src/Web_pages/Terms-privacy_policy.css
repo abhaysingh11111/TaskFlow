@@ -1,0 +1,10 @@
+.policy_wrappor{
+    background-color: rgb(28, 190, 101);
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 5rem;
+}
+.policy_img{
+    width: 95%;
+    min-height: 100vh;
+}
