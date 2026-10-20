@@ -1,12 +1,37 @@
-// here we define thr sender transporter function
-import nodemailer from "nodemailer"
-      console.log(process.env.USER_EMAIL);console.log(process.env.APP_PASSWORD) ;
+import { Resend } from "resend";
 
-const transporter = nodemailer.createTransport({
-     service : "gmail",
-     auth:{
-         user: process.env.USER_EMAIL ,
-         pass: process.env.APP_PASSWORD
-     }
-}) ;
-export default transporter ;
+const transporter = {
+  async sendMail(message) {
+    const apiKey = process.env.RESEND_API_KEY;
+    const from = process.env.RESEND_FROM_EMAIL;
+
+    if (!apiKey) {
+      throw new Error("RESEND_API_KEY is missing");
+    }
+
+    if (!from) {
+      throw new Error("RESEND_FROM_EMAIL is missing");
+    }
+
+    const resend = new Resend(apiKey);
+
+    const { data, error } = await resend.emails.send({
+      from,
+      to: message.to,
+      subject: message.subject,
+      html: message.html,
+      text: message.text,
+    });
+
+    if (error) {
+      console.error("Resend email error:", error.message);
+      throw new Error(`Email sending failed: ${error.message}`);
+    }
+
+    console.log("OTP email accepted by provider:", data?.id);
+
+    return data;
+  },
+};
+
+export default transporter;
