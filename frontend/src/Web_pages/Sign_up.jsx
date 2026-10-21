@@ -164,7 +164,7 @@ export const Sign_up_page = () => {
           {process &&(
             <Spinner></Spinner>
           )}
-         <div className='loginRedirectWrapper'>Already have an account <Link to="/login"   style={{pointerEvents: process ? "none" : "auto",opacity: process ? 0.5 : 1,cursor: process ? "not-allowed" : "pointer"}}>Login</Link></div>
+         <div className='loginRedirectWrapper'>Already have an account <Link to="/log_in"   style={{pointerEvents: process ? "none" : "auto",opacity: process ? 0.5 : 1,cursor: process ? "not-allowed" : "pointer"}}>Login</Link></div>
     </fieldset>
 
   </form>
