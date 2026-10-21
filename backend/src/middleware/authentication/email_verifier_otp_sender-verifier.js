@@ -340,11 +340,12 @@ export const Otp_sender = async(req,res)=>{
       // send email
       console.log("Sending OTP mail");
 
+      await transporter.sendMail({
+         from:
+         `"TaskFlow Web" <${process.env.USER_EMAIL}>`,
+         to:email,
 
-await transporter.sendMail({
-  from: process.env.RESEND_FROM_EMAIL,
-  to: email,
-  subject: "OTP Verification",
+         subject:"OTP Verification",
 
          html:`
          <h2>Email Verification</h2>
