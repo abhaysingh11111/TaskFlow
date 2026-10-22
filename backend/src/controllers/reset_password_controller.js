@@ -11,7 +11,7 @@ export const update_Password_controller = async(req , res) =>{
         httpOnly:true,
         secure:
         process.env.NODE_ENV === "production",
-        sameSite:"Lax"
+        sameSite:"none"
       });
     }
 

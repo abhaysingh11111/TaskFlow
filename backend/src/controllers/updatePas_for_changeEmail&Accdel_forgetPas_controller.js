@@ -176,7 +176,7 @@ export const UpdatePas_for_changeEmail_Accdel_forgetPasFlow_controller = async (
       res.clearCookie("token", {
          httpOnly: true,
          secure: true,
-         sameSite: "strict"
+         sameSite: "none"
       });
 
       // =========================

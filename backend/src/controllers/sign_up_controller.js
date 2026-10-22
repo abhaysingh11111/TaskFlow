@@ -55,7 +55,7 @@ export const signup_Controller = async(req, res) =>{
        process.env.NODE_ENV ===
        "production",
 
-       sameSite: "Lax",
+       sameSite: "none",
 
        maxAge:
        7 * 24 * 60 * 60 * 1000

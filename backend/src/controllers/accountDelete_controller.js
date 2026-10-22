@@ -48,7 +48,7 @@ export const Account_delete_Controller = async (req,res)=>{
            secure:
            process.env.NODE_ENV ===
            "production",
-           sameSite : "Lax"
+           sameSite : "none"
        });
 
        console.log(

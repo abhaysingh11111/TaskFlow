@@ -28,7 +28,7 @@ export const logOutcontroller = async (req, res) => {
             process.env.NODE_ENV === "production",
 
             // FIX
-            sameSite: "Lax"
+            sameSite: "none"
         });
 
         return res.status(200).json({
