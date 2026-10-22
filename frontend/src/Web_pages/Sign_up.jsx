@@ -94,7 +94,7 @@ export const Sign_up_page = () => {
         else if(!req.ok){
                        console.log("password error ok error"+req.status);
 
-          toast.error("something went wrong try again .") ;
+          toast.error("something went wrong try againm .") ;
         }
         else{
             toast.success("OTP sent successfully .")
